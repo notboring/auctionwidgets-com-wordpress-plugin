@@ -4,8 +4,8 @@ Official Wordpress Plugin for AuctionWidgets.Com
 The source code for the auctionwidgets.com ebay user and store listings wordpress plugin. Licensed 
 
 Plugin informations: 
-* (http://www.auctionwidgets.com/wordpress-plugin-de) [Deutsche Version] 
-* (http://www.auctionwidgets.com/wordpress-plugin-en) [English version]
+* (http://www.auctionwidgets.com/unser-wordpress-ebay-plugin) [Deutsche Version] 
+* (http://www.auctionwidgets.com/our-wordpress-ebay-plugin) [English version]
 
 API informations:
 * http://www.auctionwidgets.com/developers
