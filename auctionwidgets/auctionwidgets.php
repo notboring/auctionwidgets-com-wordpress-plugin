@@ -3,7 +3,7 @@
 Plugin Name: AW eBay User profiles & Auctions
 Plugin URI:  http://www.auctionwidgets.com/wordpress-plugin-en
 Description: Display eBay auctions and eBay user profiles on your wordpress blog
-Version:     1.0
+Version:     1.01
 Author:      Malte Köhrer
 Author URI:  http://netzkomplex.de
 License:     GPL2
@@ -36,7 +36,7 @@ function aw_get_json($atts, $url_action, $div_id)
 
     $html = "ID missing!";
     if ($a['id'] != "_empty_") {
-        $html = '<script type="text/javascript" src="//api.auctionwidgets.com/' . $url_action . '/' . $a['type'] . '/' . $a['id'] . '/' . $a['color'] . '/' . $a['lang'] . '/' . $a['site'] . '"></script>';
+        $html = '<script type="text/javascript" src="//api2.auctionwidgets.com/' . $url_action . '/' . $a['type'] . '/' . $a['id'] . '/' . $a['color'] . '/' . $a['lang'] . '/' . $a['site'] . '"></script>';
         $html .= '<div id="' . $div_id . '" />';
     }
     return $html;
@@ -50,7 +50,7 @@ function aw_get_html($atts, $url_action)
         $cache_id = "aw_com_" . $url_action . "_" . $a['type'] . '_' . $a['id'] . '_' . $a['color'] . '_' . $a['lang'] . '_' . $a['site'];
         $html = get_transient($cache_id);
         if ($html === false) {
-            $html = file_get_contents("http://api.auctionwidgets.com/" . $url_action . '/' . $a['type'] . '/' . $a['id'] . '/' . $a['color'] . '/' . $a['lang'] . '/' . $a['site']);
+            $html = file_get_contents("http://api2.auctionwidgets.com/" . $url_action . '/' . $a['type'] . '/' . $a['id'] . '/' . $a['color'] . '/' . $a['lang'] . '/' . $a['site']);
             set_transient($cache_id, $html, 60 * 60);
         }
     }
